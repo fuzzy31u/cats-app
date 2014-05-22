@@ -4,16 +4,17 @@ from fabric.api import run, sudo, cd
 from fabric.contrib.files import sed, append, contains
 
 def execute():
-#    update_yum()
-#    install()
+    update_yum()
+    install()
 #    change_network_config()
-#    config_httpd()
+    config_httpd()
 #    link_www_dir()
 #    epel()
-    remi()
-    mysql55()
-    python3()
-    python-instagram()
+#    remi()
+#    mysql55()
+#    python3()
+    python27()
+    python_instagram()
 
 def update_yum():
     sudo('yum update -y')
@@ -21,7 +22,8 @@ def update_yum():
 def install():
     sudo('yum -y install httpd')
     sudo('yum -y install emacs')
-    sudo('yum -y install wget')
+    sudo('yum -y install gcc')
+#    sudo('yum -y install wget')
 
 def change_network_config():
     sudo('service iptables stop')
@@ -65,5 +67,23 @@ def python3():
         run('source ~/.bash_profile')
         run('python3 --version')
 
-def python-instagram,():
+def python27():
+    run('wget https://www.python.org/ftp/python/2.7.6/Python-2.7.6.tgz')
+    run('tar xzvf Python-2.7.6.tgz')
+    with cd('Python-2.7.6'):
+        run('./configure --enable-shared --with-threads')
+        run('make')
+        sudo('make altinstall')
+    sudo('ln -s /usr/local/lib/libpython2.7.so /usr/lib')
+    sudo('ln -s /usr/local/lib/libpython2.7.so.1.0 /usr/lib')
+    sudo('/sbin/ldconfig -v')
+    sudo('ln -s /usr/local/bin/python2.7 /usr/local/bin/python')
+    # install easy_install, pip
+    run('wget http://pypi.python.org/packages/source/d/distribute/distribute-0.6.27.tar.gz')
+    run('tar zxvf distribute-0.6.27.tar.gz')
+    with cd('distribute-0.6.27'):
+        sudo('python setup.py install')
+        sudo('easy_install pip')
+
+def python_instagram():
     sudo('pip install python-instagram')
