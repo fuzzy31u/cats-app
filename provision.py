@@ -23,7 +23,7 @@ def install():
     sudo('yum -y install httpd')
     sudo('yum -y install emacs')
     sudo('yum -y install gcc')
-#    sudo('yum -y install wget')
+    sudo('yum -y install git.x86_64')
 
 def change_network_config():
     sudo('service iptables stop')
