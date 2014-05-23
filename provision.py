@@ -14,6 +14,7 @@ def execute():
 #    mysql55()
 #    python3()
     python27()
+    python_django()
     python_instagram()
 
 def update_yum():
@@ -84,6 +85,9 @@ def python27():
     with cd('distribute-0.6.27'):
         sudo('python setup.py install')
         sudo('easy_install pip')
+
+def python_django():
+    sudo('pip install Django')
 
 def python_instagram():
     sudo('pip install python-instagram')
