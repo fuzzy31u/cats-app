@@ -49,7 +49,7 @@
         <ul id="tiles" class="list-unstyled">
             {% for item in item_list %}
                 <li class="col-sm-4"><a href="{{ item.link }}" target="_blank">
-                    <img src="{{ item.image_url }}" class="img-responsive"/></a>
+                    <img src="{{ item.image_url }}" class="img-responsive" height="270px"/></a>
                     <p>{{ item.caption }}</p>
                 </li>
             {% endfor %}
