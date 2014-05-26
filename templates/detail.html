@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>捨て猫ちゃん</title>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+    <!--[if lt IE 9]><script src="{{ STATIC_URL }}js/html5shiv.js"></script><![endif]-->
+
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://bootswatch.com/lumen/bootstrap.min.css"/>
+    <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<header>
+    <div id="main-header">
+        <div class="container">
+            <h1>捨て猫ちゃん</h1>
+        </div>
+    </div>
+    <div class="container">
+        <nav>
+            <ul class="nav nav-pills">
+                <li><a href="#">Login</a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="container">
+    <div id="detail" class="panel panel-default container">
+        <div id="detail-img" class="box">
+            <a href="{{ item.link }}" class="thumbnail" target="_blank">
+                <img src="{{ item.image_url }}" width="600px" class="img-responsive"/>
+            </a>
+        </div>
+        <div id="detail-sub" class="box">
+            <img src="{{ item.user_profile_url }}" width="50px" height="50px"/>
+            <span id="detail-username">
+                <a href="http://instagram.com/{{ item.user_name }}" target="_blank">{{ item.user_name }}</a>
+            </span>
+            <p id="detail-time"><small>{{ item.create_time }}</small></p>
+            <hr>
+            <div id="detail-caption">{{ item.caption }}</div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
