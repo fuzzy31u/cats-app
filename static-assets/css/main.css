@@ -1,31 +1,24 @@
 @charset "utf-8";
 
+/**
+* Home layout
+*/
 #main-contents {
     position: relative;
 }
 
-/**
-* Grid container
-*/
-#tiles {
-    /*list-style-type: none;*/
-    /*position: relative; *//** Needed to ensure items are laid out relative to this container **/
-    /*margin: 0;*/
-}
-
-/**
-* Grid items
-*/
 #tiles li {
     width: 280px;
-    background-color: #ffffff;
-    border: 1px solid #dedede;
-    -moz-border-radius: 2px;
-    -webkit-border-radius: 2px;
-    border-radius: 2px;
+    /*background-color: #ffffff;*/
+    /*border: 1px solid #dedede;*/
+    /*-moz-border-radius: 2px;*/
+    /*-webkit-border-radius: 2px;*/
+    /*border-radius: 2px;*/
     /*display: none;*/
-    cursor: pointer;
-    padding: 4px;
+    /*cursor: pointer;*/
+    /*padding: 4px;*/
+    margin: 10px 0;
+    padding: 10px 10px 20px 10px;
 }
 
 #tiles li img {
@@ -33,10 +26,58 @@
 }
 
 /**
- * Grid item text
+* Detail layout
+*/
+#detail {
+    /*box-shadow: 0 0 10px;*/
+    /*background-color: #ffffff;*/
+    /*border: 1px solid #dedede;*/
+    /*-moz-border-radius: 2px;*/
+    /*-webkit-border-radius: 2px;*/
+    /*border-radius: 2px;*/
+    /*cursor: pointer;*/
+    /*padding: 4px;*/
+    overflow: hidden;
+    padding-top: 15px;
+}
+
+#detail-img {
+    margin-right: 15px;
+}
+
+#detail-sub {
+    width: 480px;
+    max-width: 100%;
+}
+
+#detail-username {
+    margin-left: 1rem;
+}
+
+#detail-time {
+    margin-top: 1rem;
+}
+
+#detail-caption {
+    margin-bottom: 15px;
+}
+
+.box {
+    float: left;
+}
+
+/**
+ * SNS buttons
  */
-#tiles li p {
-    color: #666;
-    font-size: 12px;
-    margin: 7px 0 0 7px;
+#sns-buttons {
+    overflow: hidden;
+}
+
+#sns-buttons li {
+    float: left;
+    /*margin-right: 4px;*/
+}
+
+#sns-buttons iframe {
+    margin: 0 !important;
 }

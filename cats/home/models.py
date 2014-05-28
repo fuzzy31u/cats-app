@@ -15,7 +15,6 @@ class Item(models.Model):
     user_profile_url = models.CharField(max_length=255, null=True)
     create_time = models.DateTimeField()
 
-# Instagram
 def get_list():
     api = InstagramAPI(client_id='f7a905471d5c4f29a8f6797c83499bb6')
     recent_media, next = api.tag_recent_media(tag_name=u'捨て猫')

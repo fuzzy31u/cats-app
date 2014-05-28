@@ -1,3 +1,4 @@
+import os
 from django.shortcuts import render
 
 # Create your views here.
@@ -11,7 +12,13 @@ class DetailView(TemplateView):
     def get(self, request, *args, **kwargs):
         instagram_id = self.kwargs['instagram_id']
         item = get_item(instagram_id)
+
+        host = request.environ['HTTP_HOST']
+        path_info = request.environ['PATH_INFO']
+
         context = {
-            'item': item
+            'item': item,
+            'host': host,
+            'path_info': path_info,
         }
         return self.render_to_response(context)

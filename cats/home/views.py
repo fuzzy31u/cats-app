@@ -1,7 +1,6 @@
 from django.shortcuts import render, render_to_response
 
 # Create your views here.
-from django.template import loader
 from django.views.generic import TemplateView
 from cats.home.models import get_list
 
