@@ -15,6 +15,7 @@ def get_item(instagram_id):
     if(type(media.caption) is not NoneType):
         item.caption = media.caption.text
     item.image_url = media.images['standard_resolution'].url
+    item.thumbnail_url = media.images['thumbnail'].url
     item.user_name = media.user.username
     item.user_profile_url = media.user.profile_picture
     item.create_time = media.created_time

@@ -13,9 +13,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:site_name" content="捨て猫ちゃん" />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="{{ host }}{{ path_info }}" />
-    <meta property="og:image" content="" />
-    <meta property="og:description" content="description" />
+    <meta property="og:url" content="http://{{ host }}{{ path_info }}" />
+    <meta property="og:image" content="{{ item.thumbnail_url }}" />
+    <meta property="og:title" content="捨て猫ちゃん - {{ item.caption }}" />
+    <meta property="og:description" content="{{ item.caption }}" />
     <meta property="fb:app_id" content="311235445710997" />
     <meta property="fb:admins" content="yu.dev.7" />
 </head>
@@ -64,7 +65,7 @@
             <ul id="sns-buttons" class="list-unstyled">
                 <li><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="suteneko">Tweet</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
-                <li><div class="fb-like" data-href="http://ec2-54-178-151-195.ap-northeast-1.compute.amazonaws.com/" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
+                <li><div class="fb-like" data-href="http://{{ host }}{{ path_info }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
             </ul>
         </div>
     </div>
