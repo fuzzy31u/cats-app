@@ -9,7 +9,13 @@ class HomeView(TemplateView):
 
     def get(self, request, *args, **kwargs):
         item_list = get_list()
+
+        host = request.environ['HTTP_HOST']
+        path_info = request.environ['PATH_INFO']
+
         context = {
-            'item_list': item_list
+            'item_list': item_list,
+            'host': host,
+            'path_info': path_info,
         }
         return self.render_to_response(context)

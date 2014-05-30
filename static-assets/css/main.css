@@ -1,6 +1,13 @@
 @charset "utf-8";
 
 /**
+* Common layout
+*/
+#main-header {
+    margin-bottom: 2rem;
+}
+
+/**
 * Home layout
 */
 #main-contents {
@@ -28,6 +35,10 @@
 /**
 * Detail layout
 */
+#title-link{
+    color: inherit;
+}
+
 #detail {
     /*box-shadow: 0 0 10px;*/
     /*background-color: #ffffff;*/
@@ -71,11 +82,11 @@
  */
 #sns-buttons {
     overflow: hidden;
+    margin-top: 1rem;
 }
 
 #sns-buttons li {
     float: left;
-    /*margin-right: 4px;*/
 }
 
 #sns-buttons iframe {

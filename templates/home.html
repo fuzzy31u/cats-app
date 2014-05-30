@@ -23,15 +23,47 @@
     <!--[if lt IE 9]><script src="{{ STATIC_URL }}js/html5shiv.js"></script><![endif]-->
 
     <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://bootswatch.com/lumen/bootstrap.min.css"/>
+    <link rel="stylesheet" href="http://bootswatch.com/flatly/bootstrap.min.css"/>
     <link rel="stylesheet" href="{{ STATIC_URL }}css/main.css"/>
+
+    <link rel="canonical" href="http://{{ host }}{{ path_info }}">
+
+    <meta name="keywords" content="捨て猫 里親 子猫 猫">
+    <meta name="description" content="捨て猫情報の収集サイトです。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <meta property="og:site_name" content="捨て猫ちゃん" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://{{ host }}{{ path_info }}" />
+    <meta property="og:image" content="{{ item.image_url }}" />
+    <meta property="og:title" content="捨て猫ちゃん" />
+    <meta property="og:description" content="捨て猫情報の収集サイトです。" />
+
+    <meta property="fb:admins" content="1774920422" />
+
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:site" content="@fuzzy31u">
 </head>
 <body>
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=311235445710997&version=v2.0";
+    fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
 <header>
     <div id="main-header">
         <div class="container">
-            <h1>捨て猫ちゃん</h1>
+            <ul id="sns-buttons" class="list-unstyled pull-right">
+                <li><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="suteneko">Tweet</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
+                <li><div class="fb-like" data-href="http://{{ host }}{{ path_info }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
+            </ul>
+            <h1>捨て猫ちゃん<small> Beta</small></h1>
         </div>
     </div>
 </header>
