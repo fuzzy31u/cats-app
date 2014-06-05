@@ -12,6 +12,8 @@ urlpatterns = patterns('',
     # url(r'^blog/', include('blog.urls')),
 
     # url(r'^admin/', include(admin.site.urls)),
+    url(r'^next$', 'cats.home.views.home_json'),
     url(r'^$', HomeView.as_view(), name='home'),
-    url(r'^(?P<instagram_id>(\d|_)+)$', DetailView.as_view(), name='detail'),
+    url(r'^(?P<instagram_id>(\d|_)+)$', DetailView.as_view(), name='detail')
 )
+
