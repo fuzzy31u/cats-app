@@ -33,7 +33,8 @@ def home_json(request):
 
     try:
         json, next = get_json(request.session['next'])
-    except:
+    except Exception as e:
+        print str(e)
         return HttpResponseNotFound(content_type='application/json')
 
     request.session['next'] = next

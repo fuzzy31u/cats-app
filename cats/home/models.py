@@ -21,7 +21,7 @@ class Item(models.Model):
     create_time = models.DateTimeField()
 
     def to_json(self):
-        return json.dumps(self, default=lambda o: o.__dict__, ensure_ascii=False, indent=4)
+        return json.dumps(self, default=lambda o: o.__dict__, ensure_ascii=False)
 
 def get_list():
 
@@ -37,7 +37,7 @@ def get_json(next):
     m = r.search(next)
     max_id = next[m.end():len(next)]
 
-    print max_id
+    # print max_id
 
     recent_media, next = api.tag_recent_media(tag_name=u'捨て猫', max_id=max_id)
     item_list = []
@@ -46,8 +46,9 @@ def get_json(next):
     json_item_list = []
     for item in item_list:
         json_item_list.append(item.to_json())
+    json_item_dict = {"item_list": json_item_list}
 
-    return json_item_list, next
+    return json.dumps(json_item_dict, ensure_ascii=False), next
 
 def request_instagram(recent_media, item_list):
     for media in recent_media:
