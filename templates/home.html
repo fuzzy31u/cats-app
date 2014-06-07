@@ -29,7 +29,8 @@
                 if(!obj.data('loading')){
                     obj.data('loading', true);
 
-                    $('#loading').append('<span>Loading...</span>');
+{#                    $('#loading').append('<span>Loading...</span>');#}
+                    $('#loading').append('<img src="{{ STATIC_URL }}img/ajax-loader.gif"/>');
 
                     $.ajax({
                         url: 'next',
