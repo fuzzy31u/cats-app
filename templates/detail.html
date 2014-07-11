@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>捨て猫ちゃん</title>
+    <title>捨て猫まとめ - {{ item.caption }}</title>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <!--[if lt IE 9]><script src="{{ STATIC_URL }}js/html5shiv.js"></script><![endif]-->
 
@@ -15,11 +15,11 @@
     <meta name="description" content="{{ item.caption }}">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <meta property="og:site_name" content="捨て猫ちゃん" />
+    <meta property="og:site_name" content="捨て猫まとめ" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://{{ host }}{{ path_info }}" />
     <meta property="og:image" content="{{ item.image_url }}" />
-    <meta property="og:title" content="捨て猫ちゃん - {{ item.caption }}" />
+    <meta property="og:title" content="捨て猫まとめ - {{ item.caption }}" />
     <meta property="og:description" content="{{ item.caption }}" />
 
     <meta property="fb:admins" content="1774920422" />
@@ -41,8 +41,8 @@
 <header>
     <div id="main-header">
         <div class="container">
-            <h1><a href="/" id="title-link">捨て猫ちゃん<small> Beta</small></a></h1>
-            <p id="header-description"><small>捨て猫の情報収集＆拡散サービスです。1匹でも多くの命が救えますように。</small></p>
+            <h1><a href="/" id="title-link">捨て猫まとめ<small> Beta</small></a></h1>
+            <p id="header-description"><small>捨て猫情報のまとめサイトです。1匹でも多くの命が救えますように。</small></p>
         </div>
     </div>
 {#    <div class="container">#}
@@ -71,7 +71,7 @@
             <hr>
             <div id="detail-caption">{{ item.caption }}</div>
             <ul id="sns-buttons" class="list-unstyled">
-                <li><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="suteneko">Tweet</a>
+                <li><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="捨て猫">Tweet</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
                 <li><div class="fb-like" data-href="http://{{ host }}{{ path_info }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
             </ul>

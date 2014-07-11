@@ -2,7 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>捨て猫ちゃん</title>
+    <title>捨て猫まとめ</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
     <script src="{{ STATIC_URL }}js/jquery.wookmark.min.js" type="text/javascript"></script>
@@ -42,12 +42,6 @@
                             for(var i in data.item_list) {
                                 obj_item = JSON.parse(data.item_list[i])
 
-{#                                html += '<li class="col-sm-4 panel panel-default">';#}
-{#                                html += '<a href="/' + obj_item.instagram_id + '" style="margin-bottom: 21px; padding: 4px;">';#}
-{#                                html += '<img src="' + obj_item.image_url + '" height="248"/>';#}
-{#                                html += '</a>';#}
-{#                                html += '<p>' + obj_item.caption + '</p>';#}
-{#                                html += '</li>';#}
                                 $('#tiles').append(
                                         $('<li>').attr('class', 'col-sm-4 panel panel-default').append(
                                                 $('<a>').attr('href', '/'+obj_item.instagram_id).append(
@@ -58,7 +52,6 @@
                                                 )
                                 )
                             }
-{#                            $('#tiles').append(html);#}
 
                             var handler = $('#tiles li');
                             var options = {
@@ -91,18 +84,18 @@
 
     <link rel="canonical" href="http://{{ host }}{{ path_info }}">
 
-    <meta name="keywords" content="捨て猫 里親 子猫 猫">
+    <meta name="keywords" content="捨て猫 里親 子猫 猫 捨て猫情報 まとめ">
     <meta name="description" content="捨て猫の情報収集＆拡散サービスです。1匹でも多くの命が救えますように。">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <meta property="fb:admins" content="1774920422" />
 
-    <meta property="og:site_name" content="捨て猫ちゃん" />
+    <meta property="og:site_name" content="捨て猫まとめ" />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="http://{{ host }}{{ path_info }}" />
 {#    <meta property="og:image" content="" />#}
-    <meta property="og:title" content="捨て猫ちゃん" />
-    <meta property="og:description" content="捨て猫の情報収集＆拡散サービスです。" />
+    <meta property="og:title" content="捨て猫まとめ" />
+    <meta property="og:description" content="捨て猫情報のまとめサイトです。" />
 
     <meta name="twitter:card" content="summary">
     <meta name="twitter:site" content="@fuzzy31u">
@@ -122,12 +115,12 @@
     <div id="main-header">
         <div class="container">
             <ul id="sns-buttons" class="list-unstyled pull-right">
-                <li><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="suteneko">Tweet</a>
+                <li><a href="https://twitter.com/share" class="twitter-share-button" data-hashtags="捨て猫">Tweet</a>
                     <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></li>
                 <li><div class="fb-like" data-href="http://{{ host }}{{ path_info }}" data-layout="button_count" data-action="like" data-show-faces="false" data-share="true"></div></li>
             </ul>
-            <h1>捨て猫ちゃん<small> Beta</small></h1>
-            <p id="header-description"><small>捨て猫の情報収集＆拡散サービスです。1匹でも多くの命が救えますように。</small></p>
+            <h1>捨て猫まとめ<small> Beta</small></h1>
+            <p id="header-description"><small>捨て猫情報のまとめサイトです。1匹でも多くの命が救えますように。</small></p>
         </div>
     </div>
 </header>
